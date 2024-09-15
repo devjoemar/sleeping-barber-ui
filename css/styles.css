@@ -1,0 +1,89 @@
+/* styles.css */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+#add-customer-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#barbershop {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#waiting-room, #barber-room {
+    width: 45%;
+}
+
+#waiting-chairs, #barber-chairs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.customer, .barber-chair {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.customer {
+    background-color: blue;
+}
+
+.barber-chair {
+    background-color: gray;
+    position: relative;
+}
+
+.barber-chair.cutting {
+    background-color: red;
+}
+
+.barber-chair .customer {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.barber-chair {
+    background-color: gray;
+    position: relative;
+    text-align: center; /* Center text */
+    white-space: pre-line; /* Preserve line breaks */
+}
+
+.barber-chair.cutting {
+    background-color: red;
+}
+
+/* Adjust the customer within the barber chair */
+.barber-chair .customer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Adjust width to fit the chair */
+    height: 100%; /* Adjust height to fit the chair */
+    font-size: 14px; /* Adjust font size if needed */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
